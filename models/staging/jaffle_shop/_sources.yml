@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: Migrate legacy sql codes from raw jaffle shop database into dbt 
+    database: raw
+    schema: jaffle_shop
+    
+    tables:
+      - name: customers
+        description: Each row in customers table, uniquely idfentifies single customer detail
+        columns:
+          - name: id
+            description: Primary key column
+            data_tests:
+              - unique 
+              - not_null
+
+      - name: orders
+        description: Each row in orders table, provides inform,ation about customer order details
+        columns:
+          - name: id
+            description: Primary key column
+            data_tests:
+              - unique 
+              - not_null
