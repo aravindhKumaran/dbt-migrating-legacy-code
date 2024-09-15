@@ -18,4 +18,8 @@ sources:
               - unique
               - not_null
 
+      - name: sales
+        description: sales transaction data
+        
+
               
