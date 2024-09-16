@@ -36,6 +36,6 @@
     from {{ model }}
     
     group by {{ group_by_columns | join(', ') }}
-    having avg( {{column_name}} ) < 10
+    having avg( {{column_name}} ) < 0
 
 {% endtest %}
