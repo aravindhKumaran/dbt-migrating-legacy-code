@@ -20,10 +20,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   dbt_migration:
+    
+    
     legacy: 
       +materialized: table
     staging:
       +materialized: view
+      +required_tests: {"unique.*|not_null.*": 1}
+      
     marts:
       +materialized: table
     dim:
