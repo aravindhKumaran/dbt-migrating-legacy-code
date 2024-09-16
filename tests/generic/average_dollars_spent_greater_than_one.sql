@@ -1,5 +1,5 @@
 {#
-    This generic test checks whether the average of the specified column is greater than 10 
+    This generic test checks whether the average of the specified column is greater than 0 
     when grouped by the specified columns.
 
     Parameters:
@@ -19,11 +19,11 @@
 
     In this example:
     - The 'total_amount_paid' column will be tested to ensure its average, 
-      when grouped by 'customer_id' and 'order_id', is greater than 10.
+      when grouped by 'customer_id' and 'order_id', is greater than 0.
 #}
 
 
-{% test average_dollars_spent_greater_than_ten(model, column_name, group_by_columns) %}
+{% test average_dollars_spent_greater_than_zero(model, column_name, group_by_columns) %}
 
     {{ log('************************************') }}
     {{ log('Running the generic test average_dollars_spent_greater_than_ten for model: ' ~ model, info=True) }}
