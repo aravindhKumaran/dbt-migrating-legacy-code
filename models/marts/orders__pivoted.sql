@@ -1,4 +1,10 @@
--- pivoted payment methods
+{# 
+
+    - pivoted payment methods 
+    - if you want to add or change payment methods, include that in the payment_methods variable
+
+#} 
+
 {% set payment_methods = ['bank_transfer', 'credit_card', 'coupon', 'gift_card'] -%}
 
 with payments as (
