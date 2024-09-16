@@ -3,10 +3,16 @@ version: 2
 models:
   - name: stg_stripe__payments
     description: Stripe payment details
+    data_tests:
+      - dbt_utils.expression_is_true:
+          expression: "total_amount_paid >= 0"
     columns:
       - name: order_id
         description: primary key
         tests:
           - unique
           - not_null
+
+        
+
           

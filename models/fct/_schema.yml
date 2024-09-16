@@ -1,6 +1,15 @@
 version: 2 
 
 models:
+  - name: fct__customer_orders
+    columns:
+      - name: total_amount_paid
+        data_tests:
+          - assert_value_greater_than_expected:
+              expected_value: -1
+          - average_dollars_spent_greater_than_ten:
+              group_by_columns: ['customer_id', 'order_id']
+
   - name: fct__sales_details
     columns: 
       - name: fact_id
