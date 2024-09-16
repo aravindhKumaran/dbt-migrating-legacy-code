@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_stripe__payments
+    description: Stripe payment details
+    columns:
+      - name: order_id
+        description: primary key
+        tests:
+          - unique
+          - not_null
+          
